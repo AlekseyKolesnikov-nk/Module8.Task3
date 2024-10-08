@@ -16,11 +16,11 @@ class Programm
 
             DeleteFiles(dirInfo);                                           // Вызов метода удаления файлов
 
-            LengthFiles(dirInfo);                                           // Повторный вызов метода расчета объема файлов (после удаления файлов)
+            size = LengthFiles(dirInfo);                                    // Повторный вызов метода расчета объема файлов (после удаления файлов)
             long size2 = size;
             Console.WriteLine("\n\t" + size2 + " байт - размер директория после очистки");
             
-            long size3 = size2 - size1;
+            long size3 = size1 - size2;
             Console.WriteLine("\n\t" + size3 + " байт - очищено");
     }
 
