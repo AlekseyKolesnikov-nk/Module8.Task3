@@ -6,12 +6,10 @@ class Programm
 {
     public static void Main(string[] args)
     {
-        //long size = 0;
         DirectoryInfo dirInfo = new DirectoryInfo(@"/Users/Kolesnikov_aa/desktop/8Module");
         long size = LengthFiles(dirInfo);                                   // Вызов метода расчета исходного объема файлов
 
         if (dirInfo.Exists)                                                 // Проверка пути
-            LengthFiles(dirInfo);                                           // Повторный вызов метода расчета объема файлов (после удаления файлов)
             Console.WriteLine("\n\tДиректорий: " + dirInfo + "");
             long size1 = size;
             Console.WriteLine("\n\t" + size1 + " байт - исходный размер директория");
